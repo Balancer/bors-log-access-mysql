@@ -1,0 +1,26 @@
+{
+    "name": "balancer/bors-log-access-mysql",
+
+    "authors": [
+        {
+            "name": "Balancer",
+            "email": "balancer@balancer.ru"
+        }
+    ],
+
+    "require": {
+        "balancer/bors-core": "*"
+    },
+
+	"autoload": {
+		"psr-4": {
+			"B2\\Log\\Access\\": "./"
+		}
+	},
+
+	"extra": {
+		"bors-data": {
+			"access_loggers": "B2\\Log\\Access\\MySQL"
+		}
+	}
+}
