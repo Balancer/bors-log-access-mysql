@@ -6,7 +6,7 @@ class MySQL
 {
 	static function sum_time()
 	{
-		$dbh = new \driver_mysql(\B2\Cfg::get('bors_local_db'));
+		$dbh = new \driver_mysql(\B2\Cfg::get('bors_host_db', 'BORS_HOST'));
 
 		if($is_bot)
 			$sum_time = $dbh->select('bors_access_log', 'SUM(operation_time)', array(
@@ -41,7 +41,7 @@ class MySQL
 			'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
 			'is_bot' => $is_bot ? $is_bot : NULL,
 			'is_crawler' => $is_crawler,
-		);
+		];
 
 		if(empty($object) || !is_object($object))
 		{
