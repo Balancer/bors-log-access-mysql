@@ -24,10 +24,10 @@
 		"bors-data": {
 			"access_logger": "B2\\Log\\Access\\MySQL"
 		},
-		"bors-cron-1m": [
+		"bors-data-cron-1m": [
 			"bin/access_log_expire.php",
 			"bin/access_log_counting.php"
 		],
-		"bors-migrations-auto": "migrations"
+		"bors-data-migrations-auto": "migrations"
 	}
 }
