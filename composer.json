@@ -9,10 +9,12 @@
     ],
 
     "require": {
-        "balancer/bors-core": "*"
+        "balancer/bors-core": "*",
+        "robmorgan/phinx": "*"
     },
 
 	"autoload": {
+		"classmap": ["classes/"],
 		"psr-4": {
 			"B2\\Log\\Access\\": "./"
 		}
@@ -20,7 +22,12 @@
 
 	"extra": {
 		"bors-data": {
-			"access_loggers": "B2\\Log\\Access\\MySQL"
-		}
+			"access_logger": "B2\\Log\\Access\\MySQL"
+		},
+		"bors-cron-1m": [
+			"bin/access_log_expire.php",
+			"bin/access_log_counting.php"
+		],
+		"bors-migrations-auto": "migrations"
 	}
 }
