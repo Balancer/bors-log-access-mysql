@@ -21,9 +21,7 @@
 	},
 
 	"extra": {
-		"bors-data": {
-			"access_logger": "B2\\Log\\Access\\MySQL"
-		},
+		"bors-data-access-loggers": "B2\\Log\\Access\\MySQL",
 		"bors-data-cron-1m": [
 			"bin/access_log_expire.php",
 			"bin/access_log_counting.php"
