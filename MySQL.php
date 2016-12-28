@@ -8,6 +8,8 @@ class MySQL
 	{
 		$dbh = new \driver_mysql(\B2\Cfg::get('bors_host_db', 'BORS_HOST'));
 
+		$is_bot = bors()->client()->is_bot();
+
 		if($is_bot)
 			$sum_time = $dbh->select('bors_access_log', 'SUM(operation_time)', array(
 				'is_bot' => bors()->client()->is_bot(),
