@@ -1,7 +1,7 @@
 <?php
 
-// Нужно для модификатора в шаблоне
-require_once('inc/clients/geoip-place.php');
+// Need for |geoip_flag in template
+require_once BORS_CORE.'/inc/clients/geoip-place.php';
 
 class bors_admin_reports_load extends bors_admin_page
 {
