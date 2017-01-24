@@ -24,7 +24,7 @@
 		"bors-data": {
 			"admin-reports-links": { "/_bors/admin/reports/load-mysql/": "Access logs analyze (MySQL)" }
 		},
-		"bors-route_static": {
+		"bors-route-static": {
 			"/_bors/admin/reports/load-mysql/": "bors_admin_reports_load"
 		},
 		"bors-data-access-loggers": "B2\\Log\\Access\\MySQL",
