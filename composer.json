@@ -22,7 +22,10 @@
 
 	"extra": {
 		"bors-data": {
-			"admin-reports-links": { "load-mysql/": "bors_admin_reports_load" }
+			"admin-reports-links": { "/_bors/admin/reports/load-mysql/": "Access logs analyze (MySQL)" }
+		},
+		"bors-route_static": {
+			"/_bors/admin/reports/load-mysql/": "bors_admin_reports_load"
 		},
 		"bors-data-access-loggers": "B2\\Log\\Access\\MySQL",
 		"bors-data-cron-1m": [
