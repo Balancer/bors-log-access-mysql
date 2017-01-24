@@ -9,7 +9,7 @@ class bors_admin_reports_load extends bors_admin_page
 
 	function body_data()
 	{
-		$dbh = new driver_mysql(config('bors_local_db'));
+		$dbh = new driver_mysql(\B2\Cfg::get('bors_host_db', 'BORS_HOST'));
 
 		$period = time() - $dbh->select('bors_access_log', 'MIN(access_time)', array());
 
